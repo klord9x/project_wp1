@@ -76,3 +76,25 @@ body {
 .widget {
     margin: 10px 0 30px;
 }
+article.post {
+    margin: 20px 0 40px;
+}
+
+.portfolio-piece img,
+.portfolio-image img {
+    max-width: 100%;
+}
+.prev-next {
+	font-size: 24px;
+	margin-top: 30px;
+	text-align: right;
+}
+@media (max-width: 540px){
+    .portfolio-piece h4 {
+        font-size: .8em;
+    }
+    .prev-next {
+        margin-top: 5px;
+        font-size: 18px;
+    }
+}

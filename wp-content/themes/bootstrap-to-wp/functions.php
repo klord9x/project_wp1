@@ -29,6 +29,7 @@ add_action('wp_enqueue_scripts', 'theme_js');
 //add_filter('show_admin_bar', '__return_false');
 
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
 
 function register_theme_menus() {
     register_nav_menus(
@@ -59,3 +60,4 @@ create_widget( 'Front Page Center', 'front-center', 'Displays in the center of t
 create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the homepage');
 
 create_widget( 'Page with sidebar', 'page', 'Displays page with sidebar on right');
+create_widget( 'Blog with sidebar', 'blog', 'Displays page with sidebar and posts blog section');
