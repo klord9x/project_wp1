@@ -92,6 +92,8 @@
         </div>
           
         <?php get_sidebar( 'blog'); ?>
-          
+        
       </div>
+        <?php unite_paging_nav(); ?>
+      
 <?php get_footer();

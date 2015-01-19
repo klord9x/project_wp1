@@ -62,3 +62,29 @@ create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the 
 
 create_widget( 'Page with sidebar', 'page', 'Displays page with sidebar on right');
 create_widget( 'Blog with sidebar', 'blog', 'Displays page with sidebar and posts blog section');
+
+
+/**
+ * Implement the Custom Header feature.
+ */
+//require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags_1.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+//require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+//require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+//require get_template_directory() . '/inc/jetpack.php';

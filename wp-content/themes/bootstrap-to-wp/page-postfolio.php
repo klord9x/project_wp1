@@ -45,14 +45,12 @@
                 <h4><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h4>
             </div>
              <?php $postfolio_count = $the_query->current_post + 1;?>
-            <?php if ( $postfolio_count %4 ==0): ?>
+            <?php if ( $postfolio_count %3 ==0): ?>
                 </div><div class="row">
             <?php endif;?>
                     
-                    
-            <?php endwhile; endif; ?>
-        </div>
-        
-        
+                  
+        <?php endwhile; endif; ?>
+        </div> 
         
 <?php get_footer();
