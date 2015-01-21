@@ -2,18 +2,15 @@
 
 
 <?php
-if ( get_option( 'show_on_front' ) == 'page' ) {
+if ( get_option( 'show_on_front' ) != 'page' ) {
     ?>
 	<div class="clear"></div>
 
 	</header> <!-- / END HOME SECTION  -->
 
-
-
 		<div id="content" class="site-content">
 
 	<div class="container">
-
 
 
 	<div class="content-left-wrap col-md-9">
@@ -256,14 +253,39 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 ?>
 
+<div class="clear"></div>
 
 </header> <!-- / END HOME SECTION  -->
 
 
-<div id="content" class="site-content">
+
+	<div id="content" class="site-content">
+
+<div class="container">
 
 
 
+<?php
+ 
+	if( function_exists('is_cart') && is_cart()) {
+		
+		echo '<div class="content-left-wrap col-md-12">';
+		
+	}
+	else {
+	
+		echo '<div class="content-left-wrap col-md-9">';
+		
+	}
+// 	include get_template_directory() . "/sections/carousel.php";
+?>
+
+<div id="primary" class="content-area">
+
+		<main id="main" class="site-main" role="main">
+<?php 
+// include get_template_directory() . "/sections/carousel.php"; 
+?>
 <?php
 
 	/* OUR FOCUS SECTION */
@@ -271,7 +293,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	$zerif_ourfocus_show = get_theme_mod('zerif_ourfocus_show');
 
 	if( isset($zerif_ourfocus_show) && $zerif_ourfocus_show != 1 ):
-		include get_template_directory() . "/sections/our_focus.php";
+		//include get_template_directory() . "/sections/our_focus.php";
 	endif;
 
 
@@ -312,7 +334,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
 
-		include get_template_directory() . "/sections/testimonials.php";
+		//include get_template_directory() . "/sections/testimonials.php";
 	endif;
 
 
@@ -452,6 +474,27 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		</section> <!-- / END CONTACT US SECTION-->
 		<?php
 	endif;
-
+	echo '</main><!-- #main -->
+	
+	</div><!-- #primary -->
+    </div><!-- .container -->
+    ';
+// 	<?php
+	
+	if( function_exists('is_cart') && is_cart()) {
+	    echo '</div>';
+	}
+	else {
+// 	    echo '</div>';
+	    echo '<div class="sidebar-wrap col-md-3 content-left-wrap">';
+	
+	    get_sidebar();
+	
+	    echo '</div>';
+	    echo '</div>';
+	    echo '</div>';
+	}
+	
 }
-get_footer(); ?>
+get_footer();
+ ?>
