@@ -1,11 +1,11 @@
 		<?php 
 		global $wp_query;
-		$total_posts = $wp_query->post_count;
+		$total_posts = wp_count_posts()->publish;
 		if ($total_posts>0) {
 			?>
 		
 		<section class="latest-news" id="latestnews">
-			<div class="container">
+			<div class="container-fluid">
 
 				<!-- SECTION HEADER -->
 				<div class="section-header">
@@ -67,7 +67,7 @@
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 
 											<?php if ( has_post_thumbnail() ) : ?>
-												<?php the_post_thumbnail(); ?>
+												<?php the_post_thumbnail('last-news-thumbnail'); ?>
 											<?php else: ?>
 												<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/blank-latestposts.png">
 											<?php endif; ?>
@@ -79,7 +79,8 @@
 
 										<h5 class="latestnews-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h5>
 
-										<?php the_excerpt(); ?>
+										<?php //the_excerpt(); 
+										?>
 
 									</div>
 
@@ -106,7 +107,9 @@
 									</div>
 									<div class="latesnews-content">
 										<h5 class="latestnews-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h5>
-										<?php the_excerpt(); ?>
+										<?php 
+										//the_excerpt(); 
+										?>
 									</div>
 								</div>
 							</div>
