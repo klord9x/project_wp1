@@ -251,9 +251,10 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 h1,h2 {
-	font-family: 'Montserrat', 'sans-serif';
-	font-weight: 700;
+	font-family: "Lato","Helvetica Neue",Helvetica,sans-serif;
+	/* font-weight: 700; */
 	line-height: 35px;
+	color: #b2b2b2;
 }
 h1 {
 	font-size: 30px;
@@ -677,6 +678,43 @@ a:hover,
 a:focus,
 a:active {
 	color: midnightblue;
+}
+.h-custom-headline {
+	letter-spacing: -1px;
+	line-height: 1.1
+}
+
+.h-custom-headline.accent {
+	overflow: hidden
+}
+
+.h-custom-headline.accent span {
+	padding-bottom: 2px;
+	display: inline-block;
+	position: relative
+}
+
+.h-custom-headline.accent span:before,.h-custom-headline.accent span:after
+	{
+	content: "";
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	width: 9999px;
+	display: block;
+	margin-top: -1px;
+	background-color: #dfdfdf;
+	background-color: rgba(0, 0, 0, 0.075)
+}
+
+.h-custom-headline.accent span:before {
+	right: 100%;
+	margin-right: 0.5em
+}
+
+.h-custom-headline.accent span:after {
+	left: 100%;
+	margin-left: 0.5em
 }
 /*---------------------------------------
  **   5.2 Menus                  -----
@@ -1308,12 +1346,12 @@ object {
  **   Header               -----
 -----------------------------------------*/
 /*** SECTION HEADERS ***/
-.focus,.works,.about-us,.features,.packages,.products,.testimonial,.contact-us {
+/* .focus,.works,.about-us,.features,.packages,.products,.testimonial,.contact-us {
 	padding-top: 100px;
-}
+} */
 .section-header {
 	text-align: center;
-	padding-bottom: 75px;
+	/* padding-bottom: 75px; */
 }
 .section-header h2 {
 	padding-bottom: 10px;
@@ -1531,16 +1569,16 @@ object {
 	color: rgba(255,255,255,0.7);
 	text-transform: uppercase;
 }
-/*----  SECTION:  HOME > LATEST NEWS   CAROUSEL----*/
+/*----  SECTION:  HOME > LATEST NEWS   ----*/
 .latest-news {
 	padding-bottom: 66px;
 	padding-top: 100px;
 	background: #FFFFFF;
 }
-.carousel1-inner1 {
+.carousel-inner {
 /*	margin: 0 30px; */
 }
-#carousel1-homepage-latestnews .item11{
+#carousel-homepage-latestnews .item{
 	height: auto;
 }
 .latesnews-content {
@@ -1548,7 +1586,7 @@ object {
 	line-height: 18px;
 	color: #909090;
 }
-#carousel1-homepage-latestnews .carousel1-inner1 .item11 .latestnews-title {
+#carousel-homepage-latestnews .carousel-inner .item .latestnews-title {
 	margin-bottom: 15px;
 	color: #404040;
 	position: relative;
@@ -1560,13 +1598,13 @@ object {
 	float: none;
 	width: auto;
 }
-#carousel1-homepage-latestnews .carousel1-inner1 .item11 .latestnews-title a {
+#carousel-homepage-latestnews .carousel-inner .item .latestnews-title a {
 	text-transform: uppercase;
 	color: #404040;
 	font-weight: 700;
 	display: block;
 }
-#carousel1-homepage-latestnews .item11 .latestnews-box .latestnews-title a:before {
+#carousel-homepage-latestnews .item .latestnews-box .latestnews-title a:before {
 	position: absolute;
 	margin: auto;
 	z-index: 1;
@@ -1577,48 +1615,49 @@ object {
 	bottom: -9px;
 	left: 12.5%;
 }
-#carousel1-homepage-latestnews .item11 .latestnews-box:nth-child(4n+1) .latestnews-title a:before {
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+1) .latestnews-title a:before {
 	background: #e96656;
 }
-#carousel1-homepage-latestnews .item11 .latestnews-box:nth-child(4n+2) .latestnews-title a:before {
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+2) .latestnews-title a:before {
 	background: #34d293;
 }
-#carousel1-homepage-latestnews .item11 .latestnews-box:nth-child(4n+3) .latestnews-title a:before {
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n+3) .latestnews-title a:before {
 	background: #3ab0e2;
 }
-#carousel1-homepage-latestnews .item11 .latestnews-box:nth-child(4n) .latestnews-title a:before {
+#carousel-homepage-latestnews .item .latestnews-box:nth-child(4n) .latestnews-title a:before {
 	background: #f7d861;
 }
-#carousel1-homepage-latestnews {
+#carousel-homepage-latestnews {
 	margin: 0 30px;
 }
-#carousel1-homepage-latestnews .carousel1-control1 {
+#carousel-homepage-latestnews .carousel-control {
 	width: 45px;
 	background: none;
 }
-.carousel1-control1.left {
+.carousel-control.left {
 	margin-left: -45px;
 }
-.carousel1-control1.right {
+.carousel-control.right {
 	margin-right: -45px;
 }
-#carousel1-homepage-latestnews .glyphicon-chevron-left:before{
+#carousel-homepage-latestnews .glyphicon-chevron-left:before{
 	content: "";
 	background: url(images/left-arrow.png) no-repeat center center;
 	width: 30px;
 	height: 30px;
 	float: left;
 }
-#carousel1-homepage-latestnews .glyphicon-chevron-right:before{
+#carousel-homepage-latestnews .glyphicon-chevron-right:before{
 	content: "";
 	background: url(images/right-arrow.png) no-repeat center center;	
 	width: 30px;
 	height: 30px;
 	float: left;
 }
-#carousel1-homepage-latestnews {
+#carousel-homepage-latestnews {
 	margin-top: 20px;
 }
+
 
 /*---------------------------------------
  **   Section: Our focus             -----
@@ -2108,8 +2147,8 @@ width: -webkit-calc(100% / 4);
 }
 .team-member .profile-pic {
 	border-radius: 50%;
-	width: auto;
-	height: auto;
+	width: 140px;
+	height: 140px;
 	margin: auto;
 	overflow: hidden;
 	margin-bottom: 25px;
@@ -2472,13 +2511,13 @@ width: -webkit-calc(100% / 4);
  **   Testionial           -----
 -----------------------------------------*/
 .testimonial {
-	background: #dbbf56;
+	/* background: #dbbf56; */
 	padding-bottom: 90px;
 }
 #client-feedbacks .feedback-box {
 	width: 46%;
 	float:left;
-	background: #FFFFFF;
+	background: #eee;
 	padding: 25px;
 	margin: 15px;
 	text-align: left;
@@ -2932,7 +2971,7 @@ body.custom-background {
 /*---------------------------------------
  **   Responsive            -----
 -----------------------------------------*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 
     /* TOP BAR ELEMENTS */
 	.responsive-logo {
@@ -3009,7 +3048,7 @@ body.custom-background {
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
 
 	.purchase-now .red-btn{
 	    float: none;

@@ -293,7 +293,7 @@ if ( get_option( 'show_on_front' ) != 'page' ) {
 	$zerif_ourfocus_show = get_theme_mod('zerif_ourfocus_show');
 
 	if( isset($zerif_ourfocus_show) && $zerif_ourfocus_show != 1 ):
-		//include get_template_directory() . "/sections/our_focus.php";
+		include get_template_directory() . "/sections/our_focus.php";
 	endif;
 
 
@@ -324,7 +324,7 @@ if ( get_option( 'show_on_front' ) != 'page' ) {
 
 	if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
 
-		include get_template_directory() . "/sections/our_team.php";
+// 		include get_template_directory() . "/sections/our_team.php";
 	endif;
 
 
@@ -334,7 +334,7 @@ if ( get_option( 'show_on_front' ) != 'page' ) {
 
 	if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
 
-		//include get_template_directory() . "/sections/testimonials.php";
+		include get_template_directory() . "/sections/testimonials.php";
 	endif;
 
 
