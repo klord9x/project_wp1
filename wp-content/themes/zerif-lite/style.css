@@ -275,6 +275,20 @@ h6 {
 	font-size: 16px;
 }
 /*--------------------------------------------------------------
+FIX.0 Form Ninja
+--------------------------------------------------------------*/
+h4.modal-title {
+	clear: inherit;
+	float: inherit;
+}
+.modal {
+	text-align: left;
+}
+table#wp-calendar > tbody > tr > td#today {
+	font-style: italic;
+	background-color: #ffdddd;
+}
+/*--------------------------------------------------------------
 3.0 Buttons
 --------------------------------------------------------------*/
 .buttons {
@@ -884,7 +898,7 @@ a:active {
  **   9.0 Widgets                   -----
 -----------------------------------------*/
 .sidebar-wrap {
-	border-left: 1px solid rgba(0, 0, 0, 0.05);
+	/* border-left: 1px solid rgba(0, 0, 0, 0.05); */
 }
 .widget {
 	/*margin: 0 0 1.5em;
@@ -1572,9 +1586,9 @@ object {
 }
 /*----  SECTION:  HOME > LATEST NEWS   ----*/
 .latest-news {
-	padding-bottom: 66px;
+/* 	padding-bottom: 66px;
 	padding-top: 100px;
-	background: #FFFFFF;
+	background: #FFFFFF; */
 }
 .carousel-inner {
 /*	margin: 0 30px; */
@@ -1665,9 +1679,9 @@ object {
 -----------------------------------------*/
 
 .focus {
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 	overflow: hidden;
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
 
 }
 .focus .row {
@@ -2513,7 +2527,7 @@ width: -webkit-calc(100% / 4);
 -----------------------------------------*/
 .testimonial {
 	/* background: #dbbf56; */
-	padding-bottom: 90px;
+	padding-bottom: 50px;
 }
 #client-feedbacks .feedback-box {
 	width: 46%;
@@ -2962,7 +2976,7 @@ article .posted-on a:hover{
 	display:block;
 }
 body.home.page {
-	background-image:none !important;
+	/* background-image:none !important; */
 }
 
 body.custom-background {
